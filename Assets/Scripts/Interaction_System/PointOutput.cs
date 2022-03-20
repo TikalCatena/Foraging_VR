@@ -18,22 +18,27 @@ namespace VHS
         [SerializeField] private float point1Delta = 1;
         [SerializeField] private int sourceId;
         private bool pointsAvailable;
-        private float timer = 10;
+        private float timer = 2;
         System.Random rnd = new System.Random();
-        private int timerMod;
+
+        public int _id => sourceId;
+
+        public float timerMod => timerMods.getTimerMod(_id);
+
+
+        //private int timerMod;
         //int id = sourceId;
-        
-        
+
 
         public void Start()
         {
             //float[] typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
             timer = 10;
             //timerMod = typeDistShuffle[sourceId];
-            float timerMod = timerMods.getTimerMod(sourceId);
 
+        
         }
-        public override void OnInteract()
+    public override void OnInteract()
         {
             
 
@@ -49,6 +54,9 @@ namespace VHS
             else
             {
                 uiPanel.TempMessage("There's nothing to collect!", "warning");
+
+                Debug.Log("Time remaining: " + timer);
+                Debug.Log("Timer modifier: " + timerMod);
             }
             
 

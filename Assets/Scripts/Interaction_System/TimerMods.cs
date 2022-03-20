@@ -9,8 +9,10 @@ namespace VHS
     
     public class TimerMods : MonoBehaviour
         {
-        public float[] timerMods = { 0, 0, 0, 1 };
-        // Start is called before the first frame update
+
+        
+        public float[] timerMods = { 0, 1, 2, 3 };
+        
         System.Random rnd = new System.Random();
         private float[] typeDistShuffle;
         
