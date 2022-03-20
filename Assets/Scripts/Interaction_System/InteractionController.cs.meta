@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 851ed38d531e4ac4f9985106ac49a81a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - interactionInputData: {fileID: 11400000, guid: 5ac359803ef6f8543808d7493bbf6b9a, type: 2}
+  - interactionData: {fileID: 11400000, guid: cfc73c584c0022845894e16682a4d9a6, type: 2}
+  - uiPanel: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
