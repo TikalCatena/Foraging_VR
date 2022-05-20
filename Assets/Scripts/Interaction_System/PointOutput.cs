@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
-using Random = UnityEngine.Random;
+//using Random = UnityEngine.Random;
 
 
 namespace VHS
@@ -36,20 +36,20 @@ namespace VHS
         public void Start()
         {
                 // ** Randomize trial order **
-            Random.InitState(subjectNumber * 10); // Insures same path randomizations every run for same subject (in case the experiment needs restarted)
-            trialOrder = new int[trialList.Length];
-            for(int i=0; i<trialOrder.Length; i++)
-                trialOrder[i] = i;
-            for(int t=number_practice_trials; t<trialOrder.Length; t++)
-            {
+            /*Random.InitState(subjectNumber * 10); // Insures same path randomizations every run for same subject (in case the experiment needs restarted)
+            //trialOrder = new int[trialList.Length];
+            //for(int i=0; i<trialOrder.Length; i++)
+            //    trialOrder[i] = i;
+            //for(int t=number_practice_trials; t<trialOrder.Length; t++)
+            //{
                 int tmp = trialOrder[t];
                 int r = Random.Range(t, trialOrder.Length);
                 trialOrder[t] = trialOrder[r];
                 trialOrder[r] = tmp;
-            }
+            } */
                 //float[] typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
-                timer = 10;
-                //timerMod = typeDistShuffle[sourceId];
+               // timer = 10;
+               // timerMod = typeDistShuffle[sourceId];
 
         
         }
