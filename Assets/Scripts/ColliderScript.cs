@@ -6,6 +6,12 @@ using System.IO;
 
 public class ColliderScript : MonoBehaviour
 {
+    [Space, Header("Test file?")]
+    public bool testfile;
+    
+    
+
+
     //timer for each area
     private float timer1 = 0;
     private float timer2 = 0;
@@ -58,35 +64,43 @@ public class ColliderScript : MonoBehaviour
         {
             case "Area_1":
                 area1_totalTime += (Time.realtimeSinceStartup - timer1);
-                updateData("time_1", area1_totalTime);
+                updateData("time_1", area1_totalTime, testfile);
                 break;
             case "Area_2":
                 area2_totalTime += (Time.realtimeSinceStartup - timer2);
-                updateData("time_2", area2_totalTime);
+                updateData("time_2", area2_totalTime, testfile);
                 break;
             case "Area_3":
                 area3_totalTime += (Time.realtimeSinceStartup - timer3);
-                updateData("time_3", area3_totalTime);
+                updateData("time_3", area3_totalTime, testfile);
                 break;
             case "Area_4":
                 area4_totalTime += (Time.realtimeSinceStartup - timer4);
-                updateData("time_4", area4_totalTime);
+                updateData("time_4", area4_totalTime, testfile);
                 break;
             default:
                 areaOther_totalTime += (Time.realtimeSinceStartup - timerOther);
-                updateData("time_Other", areaOther_totalTime);
+                updateData("time_Other", areaOther_totalTime, testfile);
                 break;
         }
     }
 
         //write text file code copied from Unity support lol
         // https://support.unity.com/hc/en-us/articles/115000341143-How-do-I-read-and-write-data-from-a-text-file-
-        public static void updateData(string heading, float data_out)
+        public static void updateData(string heading, float data_out, bool testfile)
         {
-            string path = "Assets/Resources/test.txt";
+            string testpath = "Assets/Resources/test.txt";
+            string path = "Assets/Resources/";
+            string path2 = string.Format("{0}{1:hh_mm}.txt", path, System.DateTime.Now);
+            
+            if (testfile)
+            {
+                path2 = testpath;
+            }
 
             //Write some text to the test.txt file
-            StreamWriter writer = new StreamWriter(path, true);
+
+            StreamWriter writer = new StreamWriter(path2, true);
             writer.WriteLine(heading + "," + data_out);
             writer.Close();
         }
