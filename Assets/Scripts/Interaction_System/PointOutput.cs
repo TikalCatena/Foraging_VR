@@ -13,6 +13,7 @@ namespace VHS
     {
         [SerializeField] InteractionUIPanel uiPanel;
         [SerializeField] TimerMods timerMods;
+        [SerializeField] ColliderScript colliderScript;
         [SerializeField] private bool setRefreshTime;
         [SerializeField] private float refreshTime;
         [SerializeField] private float refreshRadius;
@@ -53,35 +54,44 @@ namespace VHS
 
         
         }
-    public override void OnInteract()
-        {
-            
 
-            if (pointsAvailable)
+       
+        public override void OnInteract()
             {
-                uiPanel.TempMessage("You got 1 point!", "green");
+
+                
+
+                if (pointsAvailable)
+                {
+                    uiPanel.TempMessage("You got 1 point!", "green");
 
 
-                uiPanel.Point1Update(point1Delta);
+                    uiPanel.Point1Update(point1Delta);
 
-                timer = refreshTime*timerMod;
+                    timer = refreshTime * timerMod;
+                }
+                else
+                {
+                    uiPanel.TempMessage("There's nothing to collect!", "warning");
+
+                    Debug.Log("Time remaining: " + timer);
+                    Debug.Log("Timer modifier: " + timerMod);
+                }
             }
-            else
-            {
-                uiPanel.TempMessage("There's nothing to collect!", "warning");
-
-                Debug.Log("Time remaining: " + timer);
-                Debug.Log("Timer modifier: " + timerMod);
-            }
-            
-
-
-        }
 
         private void Update()
         {
+            //checking whether enough time has passed to reset resources
             checkTimer();
+
+            //checking whether agent is in the right area to interact with source
+            if (int.Parse(colliderScript.GetLocation()) != _id)
+            {
+                //TooltipMessage = "";
+            }
         }
+
+        
 
         void checkTimer()
         {
