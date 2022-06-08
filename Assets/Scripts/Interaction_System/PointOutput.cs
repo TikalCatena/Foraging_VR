@@ -22,12 +22,19 @@ namespace VHS
         private bool pointsAvailable;
         private float timer = 2;
 
+        //Hover Tooltip
+        //public string tooltipMessage_true;
+        //private string TooltipMessage;
+
         // TODO: Switch randomization system to UnityEngine.Random.
         System.Random rnd = new System.Random();
 
-        public int _id => sourceId;
+        private int _id => sourceId;
 
         public float timerMod => timerMods.getTimerMod(_id);
+
+        [SerializeField] private string area;
+        public string _area => area;
 
 
         //private int timerMod;
@@ -84,10 +91,13 @@ namespace VHS
             //checking whether enough time has passed to reset resources
             checkTimer();
 
+            
+            
             //checking whether agent is in the right area to interact with source
-            if (int.Parse(colliderScript.GetLocation()) != _id)
+
+            if(colliderScript.GetLocation() == "")
             {
-                //TooltipMessage = "";
+                uiPanel.SetTooltip("");
             }
         }
 

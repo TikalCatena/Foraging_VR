@@ -8,25 +8,33 @@ namespace VHS
 {
     public class ColliderScript : MonoBehaviour
     {
+        [SerializeField] InteractionUIPanel uiPanel;
+
         [Space, Header("Test file?")]
         public bool testfile;
 
 
         //location marker
-        public string location;
+        public string location = "";
 
-        //timer for each area
+        //timers for each area
+        private float area0_timeSpent = 0;
+        private float area1_timeSpent = 0;
+        private float area2_timeSpent = 0;
+        private float area3_timeSpent = 0;
+
+        private float timer0 = 0;
         private float timer1 = 0;
         private float timer2 = 0;
         private float timer3 = 0;
-        private float timer4 = 0;
         private float timerOther = 0;
 
         //total time for each area (will be written to data output file
+
+        private float area0_totalTime = 0;
         private float area1_totalTime = 0;
         private float area2_totalTime = 0;
         private float area3_totalTime = 0;
-        private float area4_totalTime = 0;
         private float areaOther_totalTime = 0;
 
         //data variables to write to data file
@@ -34,8 +42,7 @@ namespace VHS
 
         private void Update()
         {
-            //Only used to test if timers were working, can be deleted later
-            Debug.Log(area1_totalTime);
+
         }
         private void OnTriggerEnter(Collider other)
         //when player enters each area (collides with area collision box), the time is recorded
@@ -43,6 +50,9 @@ namespace VHS
             location = other.name;
             switch (other.name)
             {
+                case "Area_0":
+                    timer0 = Time.realtimeSinceStartup;
+                    break;
                 case "Area_1":
                     timer1 = Time.realtimeSinceStartup;
                     break;
@@ -51,9 +61,6 @@ namespace VHS
                     break;
                 case "Area_3":
                     timer3 = Time.realtimeSinceStartup;
-                    break;
-                case "Area_4":
-                    timer4 = Time.realtimeSinceStartup;
                     break;
                 default:
                     timerOther = Time.realtimeSinceStartup;
@@ -64,24 +71,30 @@ namespace VHS
         private void OnTriggerExit(Collider other)
         //then when the player leaves the area (exits collision box), the time spent is added to their total time in that area
         {
+            location = "";
             switch (other.name)
             {
+                case "Area_0":
+                    area0_timeSpent = Time.realtimeSinceStartup - timer0;
+                    area0_totalTime += (Time.realtimeSinceStartup - timer0);
+                    updateData("time_4", area0_totalTime, testfile);
+                    break;
                 case "Area_1":
+                    area1_timeSpent = Time.realtimeSinceStartup - timer1;
                     area1_totalTime += (Time.realtimeSinceStartup - timer1);
                     updateData("time_1", area1_totalTime, testfile);
                     break;
                 case "Area_2":
+                    area2_timeSpent = Time.realtimeSinceStartup - timer2;
                     area2_totalTime += (Time.realtimeSinceStartup - timer2);
                     updateData("time_2", area2_totalTime, testfile);
                     break;
                 case "Area_3":
+                    area3_timeSpent = Time.realtimeSinceStartup - timer3;
                     area3_totalTime += (Time.realtimeSinceStartup - timer3);
                     updateData("time_3", area3_totalTime, testfile);
                     break;
-                case "Area_4":
-                    area4_totalTime += (Time.realtimeSinceStartup - timer4);
-                    updateData("time_4", area4_totalTime, testfile);
-                    break;
+                
                 default:
                     areaOther_totalTime += (Time.realtimeSinceStartup - timerOther);
                     updateData("time_Other", areaOther_totalTime, testfile);
@@ -111,7 +124,8 @@ namespace VHS
 
     public string GetLocation()
         {
-            return location.Substring(location.Length - 5);
+            //return location.Substring(location.Length - 5);
+            return location;
         }
     }
 }
