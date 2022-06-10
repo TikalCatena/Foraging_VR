@@ -72,7 +72,7 @@ namespace VHS
                 {
                     uiPanel.TempMessage("You got 1 point!", "green");
 
-
+                    //HERE PULL MODIFIER FROM RANDOM DISTRIBUTION, REPLACE TIMERMOD WITH THIS
                     uiPanel.Point1Update(point1Delta);
 
                     timer = refreshTime * timerMod;

@@ -77,7 +77,7 @@ namespace VHS
                 case "Area_0":
                     area0_timeSpent = Time.realtimeSinceStartup - timer0;
                     area0_totalTime += (Time.realtimeSinceStartup - timer0);
-                    updateData("time_4", area0_totalTime, testfile);
+                    updateData("time_0", area0_totalTime, testfile);
                     break;
                 case "Area_1":
                     area1_timeSpent = Time.realtimeSinceStartup - timer1;

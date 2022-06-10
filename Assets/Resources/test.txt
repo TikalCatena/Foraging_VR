@@ -107,3 +107,43 @@ time_1,11.95607
 time_1,14.19384
 time_1,16.27404
 time_1,18.2924
++ points,1
++ points,1
+time_1,4.019835
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_1,2.741065
++ points,1
++ points,1
+time_0,2.760208
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_3,2.060033
++ points,1
+time_1,2.401071
+time_0,0.03987789
++ points,1
+time_0,2.659894
++ points,1
+time_2,2.198925
++ points,1
++ points,1
+time_0,7.140407
++ points,1
++ points,1
++ points,1
++ points,1
+time_3,1.94775
