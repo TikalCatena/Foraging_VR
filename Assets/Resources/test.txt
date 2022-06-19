@@ -148,3 +148,42 @@ time_0,7.140407
 + points,1
 time_3,1.94775
 time_Other,0.2705116
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_1,13.49517
++ points,1
+time_0,0.101408
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
