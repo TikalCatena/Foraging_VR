@@ -148,3 +148,24 @@ time_0,7.140407
 + points,1
 time_3,1.94775
 time_Other,0.2705116
+time_Other,0.8998947
+time_Other,3.009937
+time_Other,3.055744
+time_Other,3.155033
+time_Other,3.23336
+time_Other,4.012829
+time_Other,6.092487
+time_Other,0.9956894
+time_Other,1.017555
+time_Other,1.084724
+time_Other,0.3341293
+time_Other,1.056023
+time_Other,2.238525
+time_Other,6.826981
+time_Other,0.06631088
+time_0,72.5823
+time_Other,0.3995209
+time_Other,0.4991455
+time_Other,1.442535
+time_Other,1.520081
+time_Other,2.658173
