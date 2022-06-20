@@ -19,9 +19,13 @@ namespace VHS
         [SerializeField] private float refreshRadius;
         [SerializeField] private float point1Delta = 1;
         [SerializeField] private int sourceId;
+        //[SerializeField] LightingSwitch localLight; 
         private bool pointsAvailable;
         private float timer = 2;
+        public Light thislight;
+        
 
+        
         //Hover Tooltip
         //public string tooltipMessage_true;
         //private string TooltipMessage;
@@ -36,39 +40,45 @@ namespace VHS
         [SerializeField] private string area;
         public string _area => area;
 
-
+          
         //private int timerMod;
         //int id = sourceId;
 
 
         public void Start()
         {
-                // ** Randomize trial order **
-            /*Random.InitState(subjectNumber * 10); // Insures same path randomizations every run for same subject (in case the experiment needs restarted)
-            //trialOrder = new int[trialList.Length];
-            //for(int i=0; i<trialOrder.Length; i++)
-            //    trialOrder[i] = i;
-            //for(int t=number_practice_trials; t<trialOrder.Length; t++)
-            //{
-                int tmp = trialOrder[t];
-                int r = Random.Range(t, trialOrder.Length);
-                trialOrder[t] = trialOrder[r];
-                trialOrder[r] = tmp;
-            } */
-                //float[] typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
-               // timer = 10;
-               // timerMod = typeDistShuffle[sourceId];
+            // SELECT LIGHT TO BE MANIPULATED
+            //GameObject localLight = GameObject.Find("Point_light_0");
+            //Light thislight = localLight.GetComponent<Light>();
+            
 
-        
-        }
+        // ** Randomize trial order **
+        /*Random.InitState(subjectNumber * 10); // Insures same path randomizations every run for same subject (in case the experiment needs restarted)
+        //trialOrder = new int[trialList.Length];
+        //for(int i=0; i<trialOrder.Length; i++)
+        //    trialOrder[i] = i;
+        //for(int t=number_practice_trials; t<trialOrder.Length; t++)
+        //{
+            int tmp = trialOrder[t];
+            int r = Random.Range(t, trialOrder.Length);
+            trialOrder[t] = trialOrder[r];
+            trialOrder[r] = tmp;
+        } */
+        //float[] typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
+        // timer = 10;
+        // timerMod = typeDistShuffle[sourceId];
+
+
+    }
 
        
         public override void OnInteract()
             {
 
-                
+            Debug.Log("Interacted: " + gameObject.name);
+            //Debug.Log("This light: " + localLight.name);
 
-                if (pointsAvailable)
+            if (pointsAvailable)
                 {
                     uiPanel.TempMessage("You got 1 point!", "green");
 
@@ -109,11 +119,16 @@ namespace VHS
             {
                 timer -= Time.deltaTime;
                 pointsAvailable = false;
+
+                //Light proportional to timer progress
+
+                thislight.intensity = 2 * ((timerMod - timer)/timerMod);
             }
 
             if (timer <= 0)
             {
                 pointsAvailable = true;
+                thislight.intensity = 2;
             }
         }
     }
