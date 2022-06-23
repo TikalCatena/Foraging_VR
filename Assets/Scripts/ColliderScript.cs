@@ -39,11 +39,12 @@ namespace VHS
 
         //data variables to write to data file
         private float data_out;
-
-        private void Update()
+        
+        private void OnTriggerStay(Collider other)
         {
-
+            location = other.name;
         }
+        
         private void OnTriggerEnter(Collider other)
         //when player enters each area (collides with area collision box), the time is recorded
         {

@@ -20,6 +20,7 @@ namespace VHS
         TextMeshProUGUI m_textLocation;
         float points1 = 0f;
         private bool tempmessage = false;
+        public GameObject agent;
 
 
 
@@ -123,7 +124,7 @@ namespace VHS
             Point1Tracker.SetText("Points1 = " + points1);
 
             //also write to data file
-            bool testfile = GameObject.Find("Agent").GetComponent<ColliderScript>().testfile; //get testfile from ColliderScript
+            bool testfile = agent.GetComponent<ColliderScript>().testfile; //get testfile from ColliderScript
             ColliderScript.updateData("+ points", 1, testfile); 
         }
 
