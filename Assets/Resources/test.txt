@@ -1,0 +1,72 @@
+time_1,0.5443401
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_2,90.70612
++ points,1
+time_1,10.76195
++ points,1
+time_0,7.079575
++ points,1
++ points,1
++ points,1
+time_0,3.430962
+time_0,4.391647
+time_2,2.277243
+time_0,4.449623
+time_0,5.323351
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_2,4.570294
+time_2,5.520224
++ points,1
++ points,1
++ points,1
+time_1,34.08742
++ points,1
++ points,1
+time_3,11.42703
++ points,1
++ points,1
+time_3,31.78942
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
++ points,1
+time_1,2.159243
+time_0,0.01107216
+time_0,1.047531

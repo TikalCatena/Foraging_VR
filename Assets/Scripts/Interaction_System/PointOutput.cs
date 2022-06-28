@@ -19,6 +19,7 @@ namespace VHS
         [SerializeField] private float refreshRadius;
         [SerializeField] private float point1Delta = 1;
         [SerializeField] private int sourceId;
+        [SerializeField] private int lightIntensity;
         //[SerializeField] LightingSwitch localLight; 
         private bool pointsAvailable;
         private float timer = 5;
@@ -36,7 +37,7 @@ namespace VHS
 
         private int _id => sourceId;
 
-        public float timerMod => timerMods.getTimerMod(_id);
+        public float timerMod => timerMods.getTimerMean();
 
         [SerializeField] private string area;
         public string _area => area;
@@ -128,7 +129,7 @@ namespace VHS
 
                 //Light proportional to timer progress
 
-                thislight.intensity = 2 * ((timerMod - timer)/timerMod);
+                thislight.intensity = lightIntensity * ((timerMean - timer)/timerMean);
             }
 
             if (timer <= 0)
