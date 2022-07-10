@@ -125,7 +125,7 @@ namespace VHS
 
             //also write to data file
             bool testfile = agent.GetComponent<ColliderScript>().testfile; //get testfile from ColliderScript
-            ColliderScript.updateData("+ points", 1, testfile); 
+            ColliderScript.updateData("Gained points in " + agent.GetComponent<ColliderScript>().location, pointchange, testfile); 
         }
 
         public void ResetUI()

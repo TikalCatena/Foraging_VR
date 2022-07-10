@@ -70,3 +70,15 @@ time_3,31.78942
 time_1,2.159243
 time_0,0.01107216
 time_0,1.047531
++ points,1
+time_2,15.66504
++ points,1
+time_1,4.246933
+Gained points inArea_1,1
+time_1,5.433299
+Gained points inArea_3,2
+time_3,2.018713
+Gained points in Area_1,1
+time_1,3.580633
+Gained points in Area_3,1
+Gained points in Area_3,1
