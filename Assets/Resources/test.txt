@@ -82,3 +82,9 @@ Gained points in Area_1,1
 time_1,3.580633
 Gained points in Area_3,1
 Gained points in Area_3,1
+Gained points in Area_1,1
+Gained points in Area_1,1
+time_1,18.2608
+Gained points in Area_1,1
+Gained points in Area_1,1
+time_1,3.521268

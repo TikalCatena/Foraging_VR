@@ -109,7 +109,7 @@ namespace VHS
         {
             string testpath = "Assets/Resources/test.txt";
             string path = "Assets/Resources/";
-            string path2 = string.Format("{0}{1:hh_mm}.txt", path, System.DateTime.Now);
+            string path2 = string.Format("{0}{1}{2:hh_mm}.txt", path, ReadInput.participantID, System.DateTime.Now);
 
             if (testfile)
             {
