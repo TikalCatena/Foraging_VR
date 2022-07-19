@@ -1,2 +1,3 @@
 time_Other,0.8557587
 time_Other,0.8613148
+Gained points in Area_1,1

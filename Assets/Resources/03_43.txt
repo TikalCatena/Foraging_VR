@@ -12,3 +12,6 @@ time_Other,2.719276
 time_Other,2.725739
 time_Other,4.097919
 time_Other,4.104744
+Gained points in Area_1,1
+time_1,6.201421
+Gained points in Area_3,1
