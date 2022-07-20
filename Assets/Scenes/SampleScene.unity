@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1287,13 +1287,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576c1160271fcf84e9687bf92d25c081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerMean: 5
+  timerMean: 2
   timerSD: 0.5
   timerMods:
-  - 1
-  - 1
-  - 1
-  - 1
+  - 0.4
+  - 0.45
+  - 0.5
+  - 0.55
 --- !u!4 &92641160
 Transform:
   m_ObjectHideFlags: 0
@@ -6379,7 +6379,7 @@ MonoBehaviour:
   refreshRadius: 0
   point1Delta: 1
   sourceId: 1
-  lightIntensity: 0
+  lightIntensity: 2
   thislight: {fileID: 668724238}
   area: Area_1
 --- !u!54 &589076582
@@ -9245,7 +9245,7 @@ MonoBehaviour:
   refreshRadius: 0
   point1Delta: 1
   sourceId: 2
-  lightIntensity: 0
+  lightIntensity: 2
   thislight: {fileID: 279755676}
   area: Area_2
 --- !u!54 &713438688
@@ -9614,7 +9614,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26250
+  m_Name: pb_Mesh22430
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10507,7 +10507,7 @@ MonoBehaviour:
   refreshRadius: 0
   point1Delta: 1
   sourceId: 3
-  lightIntensity: 0
+  lightIntensity: 2
   thislight: {fileID: 2010586036}
   area: Area_3
 --- !u!54 &896983346
@@ -19876,7 +19876,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33364
+  m_Name: pb_Mesh22308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30586,7 +30586,7 @@ MonoBehaviour:
   refreshRadius: 0
   point1Delta: 1
   sourceId: 0
-  lightIntensity: 0
+  lightIntensity: 2
   thislight: {fileID: 108290318631039123}
   area: Area_0
 --- !u!4 &4354132846541661

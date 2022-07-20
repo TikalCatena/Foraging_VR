@@ -23,7 +23,7 @@ namespace VHS
             typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
         }
 
-        public float getTimerMod(int x)
+        public float getOdds(int x)
         {
             return typeDistShuffle[x];
         }

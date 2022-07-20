@@ -19,13 +19,15 @@ namespace VHS
         [SerializeField] private float refreshRadius;
         [SerializeField] private float point1Delta = 1;
         [SerializeField] private int sourceId;
-        [SerializeField] private int lightIntensity;
+        [SerializeField] private int lightIntensity = 2;
         //[SerializeField] LightingSwitch localLight; 
         private bool pointsAvailable;
         private float timer = 5;
         public Light thislight;
+        public static float gotPoint;
         float timerMean => timerMods.getTimerMean();
         float timerSD => timerMods.getTimerSD();
+        float localOdds => timerMods.getOdds(sourceId);
 
 
         //Hover Tooltip
@@ -82,24 +84,39 @@ namespace VHS
 
             if (pointsAvailable)
                 {
+                    float pull = Random.Range(0f, 1f);
+                Debug.Log(pull);
+                Debug.Log(localOdds);
+
+                if (pull < localOdds)
+                {
                     uiPanel.TempMessage("You got 1 point!", "green");
 
                     //HERE PULL MODIFIER FROM RANDOM DISTRIBUTION, REPLACE TIMERMOD WITH THIS [not sure this is still relevant]
                     uiPanel.Point1Update(point1Delta);
+                    gotPoint = 1f;
+                }
+                else
+                {
+                    uiPanel.TempMessage("No points received", "red");
+                    gotPoint = 0f;
+                }    
 
                     // Original Timer
-                    timer = refreshTime * timerMod;
+                    timer = timerMean;
+
+                ColliderScript.updateData_2(sourceId.ToString(), localOdds, gotPoint, false);
 
                 // New (normally distributed) timer
 
-                timer = generateNormal(timerMean, timerSD);
+                //timer = generateNormal(timerMean, timerSD);
                 }
                 else
                 {
                     uiPanel.TempMessage("There's nothing to collect!", "warning");
 
                     Debug.Log("Time remaining: " + timer);
-                    Debug.Log("Timer modifier: " + timerMod);
+                    //Debug.Log("Timer modifier: " + timerMod);
                 }
             }
 

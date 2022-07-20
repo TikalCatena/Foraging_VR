@@ -1,0 +1,18 @@
+Gained points in Area_2,1
+Gained points in Area_2,1
+Gained points in Area_2,1
+Gained points in Area_2,1
+time_2,21.60186
+Gained points in Area_1,1
+Gained points in Area_1,1
+Gained points in Area_1,1
+time_1,11.37957
+time_0,0.06600189
+Gained points in Area_0,1
+Gained points in Area_0,1
+time_0,7.940849
+time_0,12.15909
+Gained points in Area_3,1
+Gained points in Area_3,1
+Gained points in Area_3,1
+Gained points in Area_3,1

@@ -122,8 +122,24 @@ namespace VHS
             writer.WriteLine(heading + "," + data_out);
             writer.Close();
         }
+        public static void updateData_2(string heading, float localOdds, float data_out, bool testfile)
+        {
+            string testpath = "Assets/Resources/test.txt";
+            string path = "Assets/Resources/";
+            string path2 = string.Format("{0}id_{1}_{2:MM_dd}.txt", path, ReadInput.participantID, System.DateTime.Now);
 
-    public string GetLocation()
+            if (testfile)
+            {
+                path2 = testpath;
+            }
+
+            //Write some text to the test.txt file
+
+            StreamWriter writer = new StreamWriter(path2, true);
+            writer.WriteLine("Source = " + heading + "," + "Local odds = " + localOdds + "," + "Reward = " + data_out);
+            writer.Close();
+        }
+        public string GetLocation()
         {
             //return location.Substring(location.Length - 5);
             return location;
