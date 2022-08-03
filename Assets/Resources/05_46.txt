@@ -1,0 +1,11 @@
+time_Other,0.02269959
+time_Other,0.4066479
+time_Other,0.5068414
+time_Other,2.672176
+time_Other,3.205352
+time_Other,3.560143
+time_Other,7.613372
+time_Other,19.89039
+time_Other,32.16777
+time_Other,44.44536
+time_Other,44.54385

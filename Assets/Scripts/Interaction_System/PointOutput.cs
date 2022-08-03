@@ -14,6 +14,7 @@ namespace VHS
         [SerializeField] InteractionUIPanel uiPanel;
         [SerializeField] TimerMods timerMods;
         [SerializeField] ColliderScript colliderScript;
+		[SerializeField] InteractionController interactionController;
         [SerializeField] private bool setRefreshTime;
         [SerializeField] private float refreshTime;
         [SerializeField] private float refreshRadius;
@@ -118,6 +119,7 @@ namespace VHS
                     Debug.Log("Time remaining: " + timer);
                     //Debug.Log("Timer modifier: " + timerMod);
                 }
+			interactionController.m_interacting = false;
             }
 
         private void Update()

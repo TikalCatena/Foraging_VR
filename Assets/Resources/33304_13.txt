@@ -1,0 +1,7 @@
+Gained points in Area_1,1
+time_1,22.8193
+Gained points in Area_3,1
+Gained points in Area_3,1
+time_3,11.39922
+Gained points in Area_1,1
+Gained points in Area_1,1

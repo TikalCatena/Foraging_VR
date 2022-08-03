@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 namespace VHS
 {
     // Start is called before the first frame update
     public class InteractionController : MonoBehaviour
     {
-
         #region Variables
 
         [Header("Data")]
@@ -30,7 +30,7 @@ namespace VHS
         #region Private
 
             private Camera m_cam;
-        private bool m_interacting;
+        public bool m_interacting;
         private float m_holdTimer = 0f;
         #endregion
         #endregion
@@ -100,6 +100,8 @@ namespace VHS
                 m_interacting = true;
                 m_holdTimer = 0f;
             }
+
+
 
             if (interactionInputData.InteractedRelease)
             {

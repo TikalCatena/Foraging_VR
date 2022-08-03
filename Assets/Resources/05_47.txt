@@ -1,0 +1,13 @@
+time_Other,48.2879
+time_0,32.64282
+time_Other,49.6787
+time_Other,50.12262
+time_Other,51.57825
+time_3,4.398842
+time_Other,52.37933
+time_Other,53.18081
+time_Other,56.57959
+time_3,37.11279
+time_Other,57.60353
+time_Other,58.58908
+time_Other,59.71695

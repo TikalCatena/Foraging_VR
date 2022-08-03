@@ -6,6 +6,7 @@ namespace VHS
 {
     public class InputHandler : MonoBehaviour
     {
+        public InputTester inputTester;
         #region Data
             //[BoxGroup("Input Data")]
             //public CameraInputData cameraInputData;
@@ -37,8 +38,19 @@ namespace VHS
 
         void GetInteractionInputData()
         {
+            
             interactionInputData.InteractedClicked = Input.GetKeyDown(KeyCode.E);
             interactionInputData.InteractedRelease = Input.GetKeyUp(KeyCode.E);
+            
+            interactionInputData.InteractedClicked = inputTester.isPressed;
+            //interactionInputData.InteractedRelease = !inputTester.isPressed;
+        }
+        
+        void GetInteractionInputDataVR()
+        {
+            
+            interactionInputData.InteractedClicked = inputTester.isPressed;
+            interactionInputData.InteractedRelease = inputTester.isPressed;
         }
 
         #endregion
