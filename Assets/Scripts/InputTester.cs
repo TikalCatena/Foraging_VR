@@ -31,11 +31,20 @@ namespace VHS
             TriggerClick.RemoveOnStateDownListener(Press, inputSource);
             print("up");
         }
-
+        float timer;
         private void Press(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
+            if (Time.realtimeSinceStartup - timer > .05f)
+            {
+                timer = Time.realtimeSinceStartup;
+                print("Success");
+            }
+            else
+            {
+                print("too fast");
+            }
             //put your stuff here
-            print("Success");
+            
             //interactionController.m_interacting = true;
             isPressed = true;
 

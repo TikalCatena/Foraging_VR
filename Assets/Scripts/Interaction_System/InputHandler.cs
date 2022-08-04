@@ -42,7 +42,7 @@ namespace VHS
             interactionInputData.InteractedClicked = Input.GetKeyDown(KeyCode.E);
             interactionInputData.InteractedRelease = Input.GetKeyUp(KeyCode.E);
             
-            interactionInputData.InteractedClicked = inputTester.isPressed;
+            //interactionInputData.InteractedClicked = inputTester.isPressed;
             //interactionInputData.InteractedRelease = !inputTester.isPressed;
         }
         

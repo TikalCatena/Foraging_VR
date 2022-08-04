@@ -119,7 +119,7 @@ namespace VHS
                     Debug.Log("Time remaining: " + timer);
                     //Debug.Log("Timer modifier: " + timerMod);
                 }
-			interactionController.m_interacting = false;
+			//interactionController.m_interacting = false;
             }
 
         private void Update()
