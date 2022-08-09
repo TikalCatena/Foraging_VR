@@ -42,15 +42,25 @@ namespace VHS
         //public void TemporalReset(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
         //    BackendShaderHandler.Instance.resetTemporalValues = true; }
 
-        //void Start() {
-        //    TriggerOnOff.AddOnStateDownListener(TriggerDown, handType);
-        //    TriggerOnOff.AddOnStateUpListener(TriggerUp, handType);
-        //    ampAdjustUp.AddOnStateDownListener(TrackPadUp, handType);
-        //    ampAdjustDown.AddOnStateDownListener(TrackPadDown, handType); 
-        //    sideButton.AddOnStateDownListener(TemporalReset, handType); }
+        void Start() 
+        {
+            TriggerOnOff.AddOnStateDownListener(TriggerDown, handType);
+            TriggerOnOff.AddOnStateUpListener(TriggerUp, handType);
+            ampAdjustUp.AddOnStateDownListener(TrackPadUp, handType);
+            ampAdjustDown.AddOnStateDownListener(TrackPadDown, handType); 
+            sideButton.AddOnStateDownListener(TemporalReset, handType); 
+        }
 
-        //public static SteamControllerVR Instance { get; private set; }
-        //private void Awake() { if (Instance == null) { Instance = this; DontDestroyOnLoad(gameObject); }else { Destroy(gameObject); } }
+        public static SteamControllerVR Instance { get; private set; }
+        private void Awake() 
+        { 
+            if (Instance == null) 
+            { 
+                Instance = this; DontDestroyOnLoad(gameObject); 
+            }
+            else { Destroy(gameObject); 
+            } 
+        }
 
     }
 }
