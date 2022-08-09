@@ -9,27 +9,28 @@ namespace VHS
 {
     public class SteamControllerVR : MonoBehaviour
     {
-        public SteamVR_Action_Boolean ampAdjustUp, ampAdjustDown;
+        //public SteamVR_Action_Boolean ampAdjustUp, ampAdjustDown;
         public SteamVR_Action_Boolean TriggerOnOff;
-        public SteamVR_Action_Boolean sideButton;
+        //public SteamVR_Action_Boolean sideButton;
         public SteamVR_Input_Sources handType;
         private InputTester inputTester;
-        public bool isPressed;
+        public bool triggerPressed;
 
         public void TriggerUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
             //TaskHandler.Instance.triggerPressed = false;
-            isPressed = false;
-            inputTester.OnDisable();
+            triggerPressed = false;
+            //inputTester.OnDisable();
         }
 
         public void TriggerDown(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
             //    Debug.Log("“Trigger is down”");
             //    TaskHandler.Instance.triggerPressed = true;
-            isPressed = true;
-            inputTester.OnEnable();
+            triggerPressed = true;
+            //inputTester.OnEnable();
         }
+
 
         //public void TrackPadUp(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource) {
         //    if (TaskHandler.Instance.phase < 4)
@@ -46,9 +47,10 @@ namespace VHS
         {
             TriggerOnOff.AddOnStateDownListener(TriggerDown, handType);
             TriggerOnOff.AddOnStateUpListener(TriggerUp, handType);
-            ampAdjustUp.AddOnStateDownListener(TrackPadUp, handType);
-            ampAdjustDown.AddOnStateDownListener(TrackPadDown, handType); 
-            sideButton.AddOnStateDownListener(TemporalReset, handType); 
+
+            //ampAdjustUp.AddOnStateDownListener(TrackPadUp, handType);
+            //ampAdjustDown.AddOnStateDownListener(TrackPadDown, handType); 
+            //sideButton.AddOnStateDownListener(TemporalReset, handType); 
         }
 
         public static SteamControllerVR Instance { get; private set; }

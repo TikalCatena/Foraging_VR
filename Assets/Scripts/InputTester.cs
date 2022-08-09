@@ -49,6 +49,7 @@ namespace VHS
             
             interactionController.m_interacting = true;
             isPressed = true;
+            buffer = true;
 
         }
 

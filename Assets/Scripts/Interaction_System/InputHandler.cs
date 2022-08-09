@@ -24,6 +24,7 @@ namespace VHS
             //cameraInputData.ResetInput();
             //movementInputData.ResetInput();
             interactionInputData.ResetInput();
+            
         }
 
         private void Update()
@@ -36,14 +37,25 @@ namespace VHS
 
         #region Custom Methods
 
+        float inputTimer = 0f;
+        public bool GetTrigger()
+        {
+            if (Time.realtimeSinceStartup - inputTimer > .5f & SteamControllerVR.Instance.triggerPressed )
+            {
+                inputTimer = Time.realtimeSinceStartup;
+                return true;
+            }
+            return false;
+        }
         void GetInteractionInputData()
         {
             
             interactionInputData.InteractedClicked = Input.GetKeyDown(KeyCode.E);
             interactionInputData.InteractedRelease = Input.GetKeyUp(KeyCode.E);
             
-            //interactionInputData.InteractedClicked = inputTester.isPressed;
-            //interactionInputData.InteractedRelease = !inputTester.isPressed;
+
+            interactionInputData.InteractedClicked = GetTrigger();
+            interactionInputData.InteractedRelease = !GetTrigger();
         }
         
         void GetInteractionInputDataVR()
