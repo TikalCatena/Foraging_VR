@@ -13,28 +13,30 @@ namespace VHS
         public InteractionController interactionController;
         public SteamVR_Action_Boolean TriggerClick;
         private SteamVR_Input_Sources inputSource;
+        private SteamControllerVR steamControllerVR;
 
         public bool buffer = true;
+        float timer;
 
         private void Start()
         {
+            timer = 0;
         } //Monobehaviours without a Start function cannot be disabled in Editor, just FYI
 
-        private void OnEnable()
+        public void OnEnable()
         {
             TriggerClick.AddOnStateDownListener(Press, inputSource);
             print("down");
         }
 
-        private void OnDisable()
+        public void OnDisable()
         {
             TriggerClick.RemoveOnStateDownListener(Press, inputSource);
             print("up");
         }
-        float timer;
         private void Press(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
         {
-            if (Time.realtimeSinceStartup - timer > .05f)
+            if (Time.realtimeSinceStartup - timer > .5f)
             {
                 timer = Time.realtimeSinceStartup;
                 print("Success");
@@ -45,21 +47,23 @@ namespace VHS
             }
             //put your stuff here
             
-            //interactionController.m_interacting = true;
+            interactionController.m_interacting = true;
             isPressed = true;
 
         }
 
+
+        
         private void Update()
         {
             if (buffer)
             {
-                buffer = false;
+                //buffer = false;
             }
             else
             {
-                isPressed = false;
-                buffer = true;
+                //isPressed = false;
+                //buffer = true;
             }
             //isPressed = false;
             //if(SteamVR_Input.__actions_default_in_GrabPinch.GetStateDown(inputSource))
