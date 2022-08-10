@@ -47,7 +47,7 @@ namespace VHS
             }
             //put your stuff here
             
-            interactionController.m_interacting = true;
+            //interactionController.m_interacting = true;
             isPressed = true;
             buffer = true;
 
