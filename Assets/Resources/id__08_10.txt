@@ -154,3 +154,33 @@ Source = 0,Local odds = 0.4,Reward = 0
 Source = 0,Local odds = 0.4,Reward = 0
 Source = 0,Local odds = 0.4,Reward = 1
 Source = 0,Local odds = 0.4,Reward = 0
+Source = 0,Local odds = 0.45,Reward = 1Time = 29.45705
+Source = 0,Local odds = 0.45,Reward = 1Time = 33.01583
+Source = 0,Local odds = 0.45,Reward = 1Time = 35.14684
+Source = 0,Local odds = 0.45,Reward = 0Time = 37.52072
+Source = 0,Local odds = 0.45,Reward = 1Time = 41.10443
+Source = 0,Local odds = 0.45,Reward = 1Time = 43.62375
+Source = 0,Local odds = 0.45,Reward = 0Time = 47.47071
+Source = 0,Local odds = 0.45,Reward = 1Time = 51.4258
+Source = 0,Local odds = 0.45,Reward = 0Time = 54.20776
+Source = 0,Local odds = 0.45,Reward = 1Time = 56.85571
+Source = 1,Local odds = 0.55,Reward = 0Time = 71.22686
+Source = 1,Local odds = 0.55,Reward = 0Time = 73.81257
+Source = 1,Local odds = 0.55,Reward = 1Time = 75.81755
+Source = 1,Local odds = 0.55,Reward = 1Time = 78.46392
+Source = 1,Local odds = 0.55,Reward = 1Time = 80.59207
+Source = 1,Local odds = 0.55,Reward = 1Time = 82.71916
+Source = 1,Local odds = 0.55,Reward = 1Time = 84.8376
+Source = 1,Local odds = 0.55,Reward = 0Time = 87.82547
+Source = 1,Local odds = 0.55,Reward = 1Time = 90.05279
+Source = 1,Local odds = 0.55,Reward = 1Time = 93.27681
+Source = 1,Local odds = 0.55,Reward = 0Time = 97.87969
+Source = 1,Local odds = 0.55,Reward = 0Time = 99.91004
+Source = 1,Local odds = 0.55,Reward = 1Time = 103.5541
+Source = 1,Local odds = 0.55,Reward = 0Time = 105.6752
+Source = 1,Local odds = 0.55,Reward = 0Time = 107.8032
+Source = 1,Local odds = 0.55,Reward = 0Time = 109.9328
+Source = 1,Local odds = 0.55,Reward = 0Time = 112.0483
+Source = 1,Local odds = 0.55,Reward = 0Time = 114.1678
+Source = 1,Local odds = 0.55,Reward = 0Time = 117.2289
+Source = 1,Local odds = 0.55,Reward = 0Time = 120.3323

@@ -106,7 +106,7 @@ namespace VHS
                     // Original Timer
                     timer = timerMean;
 
-                ColliderScript.updateData_2(sourceId.ToString(), localOdds, gotPoint, false);
+                ColliderScript.updateData_2(_id.ToString(), localOdds, gotPoint, false);
 
                 // New (normally distributed) timer
 
