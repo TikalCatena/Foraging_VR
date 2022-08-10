@@ -43,12 +43,14 @@ namespace VHS
         private void OnTriggerStay(Collider other)
         {
             location = other.name;
+            print(location);
         }
         
         private void OnTriggerEnter(Collider other)
         //when player enters each area (collides with area collision box), the time is recorded
         {
             location = other.name;
+            print(location);
             switch (other.name)
             {
                 case "Area_0":
@@ -72,7 +74,7 @@ namespace VHS
         private void OnTriggerExit(Collider other)
         //then when the player leaves the area (exits collision box), the time spent is added to their total time in that area
         {
-            location = "";
+            //location = "";
             switch (other.name)
             {
                 case "Area_0":

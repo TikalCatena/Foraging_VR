@@ -40,12 +40,23 @@ namespace VHS
         void Awake()
         {
             m_cam = FindObjectOfType<Camera>();
+            print(m_cam);
         }
+
+        float int_timer = 0f;
 
         void Update()
         {
             CheckForInteractable();
-            CheckForInteractableInput();
+
+            if (Time.realtimeSinceStartup - int_timer > .1f)
+            {
+                int_timer = Time.realtimeSinceStartup;
+                //print("Trigger got");
+                CheckForInteractableInput();
+            }
+            
+            
         }
 
         #endregion
@@ -78,12 +89,14 @@ namespace VHS
                         }
                     }    
                 }
+                //print(_interactable);
                 
             }
             else
             {
                 uiPanel.ResetUI();
                 interactionData.ResetData();
+                //print("miss");
             }
 
             Debug.DrawRay(_ray.origin, _ray.direction * rayDistance, _hitSomething ? Color.green : Color.red);

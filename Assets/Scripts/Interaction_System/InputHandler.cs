@@ -6,7 +6,7 @@ namespace VHS
 {
     public class InputHandler : MonoBehaviour
     {
-        public InputTester inputTester;
+        //public InputTester inputTester;
         #region Data
             //[BoxGroup("Input Data")]
             //public CameraInputData cameraInputData;
@@ -40,13 +40,15 @@ namespace VHS
         float inputTimer = 0f;
         public bool GetTrigger()
         {
-            if (Time.realtimeSinceStartup - inputTimer > .5f & SteamControllerVR.Instance.triggerPressed )
+            if (Time.realtimeSinceStartup - inputTimer > 0.2f & SteamControllerVR.Instance.triggerPressed )
             {
                 inputTimer = Time.realtimeSinceStartup;
-				print("Trigger got");
+				//print("Trigger got");
                 return true;
             }
             return false;
+
+
         }
         void GetInteractionInputData()
         {
@@ -59,13 +61,7 @@ namespace VHS
             //interactionInputData.InteractedRelease = !GetTrigger();
         }
         
-        void GetInteractionInputDataVR()
-        {
-            
-            interactionInputData.InteractedClicked = inputTester.isPressed;
-            interactionInputData.InteractedRelease = inputTester.isPressed;
-        }
-
+        
         #endregion
     }
 

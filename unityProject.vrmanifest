@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.foraging_v0.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\UCSBu\\Documents\\ForagingVR\\Foraging_VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Tikal\\Documents\\GitHub\\Foraging_VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Foraging_v0 [Testing]"

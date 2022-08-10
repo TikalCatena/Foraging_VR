@@ -131,10 +131,7 @@ namespace VHS
             
             //checking whether agent is in the right area to interact with source
 
-            if(colliderScript.GetLocation() == "")
-            {
-                uiPanel.SetTooltip("");
-            }
+            //if(colliderScript.GetLocation() == ""){uiPanel.SetTooltip("");}
         }
 
         

@@ -21,6 +21,7 @@ namespace VHS
         public void Start()
         {
             typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
+            
         }
 
         public float getOdds(int x)
@@ -37,5 +38,9 @@ namespace VHS
         {
             return timerSD;
         }
+
+        
+
+        
     }
 }
