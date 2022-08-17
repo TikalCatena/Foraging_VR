@@ -99,7 +99,7 @@ namespace VHS
                 }
                 else
                 {
-                    uiPanel.TempMessage("No points received", "red");
+                    uiPanel.TempMessage("No points received", "warning");
                     gotPoint = 0f;
                 }    
 
@@ -114,7 +114,7 @@ namespace VHS
                 }
                 else
                 {
-                    uiPanel.TempMessage("There's nothing to collect!", "warning");
+                    uiPanel.TempMessage2("There's nothing to collect!", "warning");
 
                     Debug.Log("Time remaining: " + timer);
                     //Debug.Log("Timer modifier: " + timerMod);

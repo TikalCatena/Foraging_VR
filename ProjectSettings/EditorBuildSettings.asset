@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LaunchScreen.unity
     guid: 014d51be8529b344eafef3d25b66ab98
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/VRSetup.unity
+    guid: dc5d75d50f9934e48a788a969895af28
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 04f0b3a667a5965469f3ad3e3e3cba5b, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: c35db2b8fde97a94d82110c36606ad0e, type: 2}

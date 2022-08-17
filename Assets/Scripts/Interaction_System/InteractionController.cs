@@ -49,7 +49,7 @@ namespace VHS
         {
             CheckForInteractable();
 
-            if (Time.realtimeSinceStartup - int_timer > .1f)
+            if (Time.realtimeSinceStartup - int_timer > .05f)
             {
                 int_timer = Time.realtimeSinceStartup;
                 //print("Trigger got");

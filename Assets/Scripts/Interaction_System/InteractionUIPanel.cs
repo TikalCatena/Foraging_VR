@@ -12,6 +12,7 @@ namespace VHS
         [SerializeField] private Image progressBar;
         [SerializeField] private TextMeshProUGUI tooltipText;
         [SerializeField] private TextMeshProUGUI othertext;
+        [SerializeField] private TextMeshProUGUI othertext2;
         [SerializeField] private TextMeshProUGUI upText;
         [SerializeField] private TextMeshProUGUI leftText;
         [SerializeField] private TextMeshProUGUI rightText;
@@ -65,6 +66,31 @@ namespace VHS
             othertext.CrossFadeAlpha(1, 0, false);
             
             othertext.CrossFadeAlpha(0, TextFade, false);
+        }
+        
+        public void TempMessage2(string text, string type = "neutral")
+        {
+
+            othertext2.SetText(text);
+
+            if (type == "neutral")
+            {
+                othertext2.color = new Color(0, 0, 0, 1);
+            }
+
+            if (type == "warning")
+            {
+                othertext2.color = new Color(250, 0, 0, 1);
+            }
+
+            if (type == "green")
+            {
+                othertext2.color = new Color(0, 128, 0, 1);
+            }
+
+            othertext2.CrossFadeAlpha(1, 0, false);
+            
+            othertext2.CrossFadeAlpha(0, TextFade, false);
         }
         public void RandomText3(string text1, string text2, string text3)
         {
@@ -121,7 +147,7 @@ namespace VHS
         public void Point1Update(float pointchange)
         {
             points1 += pointchange;
-            Point1Tracker.SetText("Points1 = " + points1);
+            Point1Tracker.SetText("Points = " + points1);
 
             //also write to data file
             bool testfile = agent.GetComponent<ColliderScript>().testfile; //get testfile from ColliderScript
