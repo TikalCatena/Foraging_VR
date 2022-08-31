@@ -2,3 +2,6 @@ Gained points in ,1
 time_Other,0.2214336
 time_Other,0.6196594
 time_Other,3.307228
+time_Other,12.89061
+time_Other,1.734787
+time_Other,7.076145

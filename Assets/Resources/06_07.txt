@@ -5,3 +5,12 @@ time_Other,5.90609
 time_Other,14.25746
 time_Other,17.09966
 time_Other,17.25731
+time_Other,16.94337
+time_Other,18.92144
+time_Other,25.09609
+Gained points in Crystalsv01_0 (5),1
+time_Other,27.8077
+time_Other,30.44592
+Gained points in Crystalsv01_0 (5),1
+Gained points in Crystalsv01_0 (5),1
+time_Other,33.15418

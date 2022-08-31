@@ -2,3 +2,27 @@ time_Other,113.8349
 time_Other,115.4786
 time_Other,117.7179
 time_Other,118.0651
+time_Other,2.74817
+Gained points in Crystalsv01_0 (5),1
+time_Other,4.034109
+time_Other,4.374967
+time_Other,5.230079
+time_Other,5.98306
+time_Other,6.040845
+time_Other,6.051864
+time_Other,6.067794
+time_Other,6.078555
+time_Other,6.742621
+time_Other,7.200833
+time_Other,8.589185
+time_Other,9.166961
+Gained points in Crystalsv01_0 (5),1
+time_Other,9.313312
+Gained points in Crystalsv01_0 (5),1
+time_Other,9.744807
+time_Other,10.02238
+Gained points in Crystalsv01_0 (5),1
+time_Other,14.51692
+time_Other,14.9402
+time_Other,21.83699
+Gained points in Crystalsv01_0 (5),1

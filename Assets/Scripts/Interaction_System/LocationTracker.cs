@@ -22,7 +22,7 @@ public class LocationTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
 {
-      filename = Application.dataPath + "/" + "test.csv";
+      filename = Application.dataPath + "/" + ReadInput.participantID + "test.csv";
 
 
 }
@@ -66,7 +66,7 @@ public void WriteData()
 
             using (TextWriter tw = File.AppendText(filename))
             {
-                tw.WriteLine(pos + "," + ori + ",");
+                tw.WriteLine(pos + "," + ori + "," + Time.realtimeSinceStartup + ",");
                 tw.Close();
             }
 

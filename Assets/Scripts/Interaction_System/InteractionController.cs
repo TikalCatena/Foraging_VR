@@ -27,6 +27,7 @@ namespace VHS
 
         public LayerMask interactableLayer;
 
+        
         #region Private
 
             private Camera m_cam;
@@ -64,13 +65,24 @@ namespace VHS
         #region Custom Methods
         void CheckForInteractable()
         {
+
+            Vector3 rayPos = m_cam.transform.position + Vector3.back;
             Ray _ray = new Ray(m_cam.transform.position, m_cam.transform.forward);
             RaycastHit _hitInfo;
+            
 
             bool _hitSomething = Physics.SphereCast(_ray, raySphereRadius, out _hitInfo, rayDistance, interactableLayer);
 
             if(_hitSomething)
             {
+                Debug.Log(_hitInfo.transform.name.Substring(0,4));
+                if (_hitInfo.transform.name.Substring(0,4) == "")
+                {
+                    
+                }
+
+                //_hitInfo.transform;
+                //Debug.Log(_hitInfo.name);
                 InteractableBase _interactable = _hitInfo.transform.GetComponent<InteractableBase>();
 
                 if(_interactable != null)
@@ -78,14 +90,14 @@ namespace VHS
                     if (interactionData.IsEmpty())
                     {
                         interactionData.Interactable = _interactable;
-                        uiPanel.SetTooltip(_interactable.TooltipMessage); // Interaction message!
+                        uiPanel.SetTooltip(_interactable.tooltipMessage); // Interaction message!
                     }
                     else
                     {
-                        if (!interactionData.IsSameInteractable(_interactable))
+                        if (true)//!interactionData.IsSameInteractable(_interactable))
                         {
                             interactionData.Interactable = _interactable;
-                            uiPanel.SetTooltip(_interactable.TooltipMessage);
+                            uiPanel.SetTooltip(_interactable.tooltipMessage);
                         }
                     }    
                 }

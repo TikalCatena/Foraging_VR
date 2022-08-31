@@ -29,7 +29,8 @@ namespace VHS
         float timerMean => timerMods.getTimerMean();
         float timerSD => timerMods.getTimerSD();
         float localOdds => timerMods.getOdds(sourceId);
-
+		private string _baseTooltip;
+		
 
         //Hover Tooltip
         //public string tooltipMessage_true;
@@ -52,11 +53,10 @@ namespace VHS
 
         public void Start()
         {
+			_baseTooltip = TooltipMessage;
             // SELECT LIGHT TO BE MANIPULATED
             //GameObject localLight = GameObject.Find("Point_light_0");
             //Light thislight = localLight.GetComponent<Light>();
-
-
             // ** Randomize trial order **
             /*Random.InitState(subjectNumber * 10); // Insures same path randomizations every run for same subject (in case the experiment needs restarted)
             //trialOrder = new int[trialList.Length];
@@ -72,8 +72,6 @@ namespace VHS
             //float[] typeDistShuffle = timerMods.OrderBy(x => rnd.Next()).ToArray();
             // timer = 10;
             // timerMod = typeDistShuffle[sourceId];
-
-
         }
 
        
@@ -126,6 +124,14 @@ namespace VHS
         {
             //checking whether enough time has passed to reset resources
             checkTimer();
+			if (pointsAvailable) 
+			{
+				tooltipMessage = _baseTooltip;
+			} 
+			else 
+			{
+				tooltipMessage = "";
+			}
 
             
             

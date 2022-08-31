@@ -45,7 +45,9 @@ namespace VHS
             location = other.name;
             print(location);
         }
-        
+        //private void Update() {
+		//if(location == "") {UiPanel.ResetUI();}}
+		
         private void OnTriggerEnter(Collider other)
         //when player enters each area (collides with area collision box), the time is recorded
         {

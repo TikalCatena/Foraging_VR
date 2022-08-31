@@ -20,7 +20,7 @@ namespace VHS
 
         [SerializeField] private bool isInteractable;
 
-        [SerializeField] private string tooltipMessage;
+        [SerializeField] public string tooltipMessage;
 
         #endregion
 
