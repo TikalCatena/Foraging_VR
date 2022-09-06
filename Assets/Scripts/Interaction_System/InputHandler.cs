@@ -40,7 +40,7 @@ namespace VHS
         float inputTimer = 0f;
         public bool GetTrigger()
         {
-            if (Time.realtimeSinceStartup - inputTimer > 0.1f & SteamControllerVR.Instance.triggerPressed )
+            if (Time.realtimeSinceStartup - inputTimer > 0.5f & SteamControllerVR.Instance.triggerPressed )
             {
                 inputTimer = Time.realtimeSinceStartup;
 				//print("Trigger got");

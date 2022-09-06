@@ -50,12 +50,12 @@ namespace VHS
         {
             CheckForInteractable();
 
-            if (Time.realtimeSinceStartup - int_timer > .05f)
-            {
+            //if (Time.realtimeSinceStartup - int_timer > .05f) 
+            //{
                 int_timer = Time.realtimeSinceStartup;
                 //print("Trigger got");
                 CheckForInteractableInput();
-            }
+            //}
             
             
         }
@@ -71,7 +71,7 @@ namespace VHS
             RaycastHit _hitInfo;
             
 
-            bool _hitSomething = Physics.SphereCast(_ray, raySphereRadius, out _hitInfo, rayDistance, interactableLayer);
+            bool _hitSomething = Physics.Raycast(_ray, out _hitInfo, rayDistance, interactableLayer);
 
             if(_hitSomething)
             {
