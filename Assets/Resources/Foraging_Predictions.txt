@@ -12,3 +12,17 @@ Blue, Green, Orange, Purple
 Tikal predictions
 Blue, Green, Orange, Purple
 Points = 58
+
+
+
+Mitch
+
+Control Session
+Predicted = Orange, green, blue, purple
+Actual = Blue, orange, purple, green
+
+
+Exploration Session
+Predicted = Orange, purple, blue, green
+Actual = blue, purple, orange, green
+62

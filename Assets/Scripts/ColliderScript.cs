@@ -140,7 +140,7 @@ namespace VHS
             //Write some text to the test.txt file
 
             StreamWriter writer = new StreamWriter(path2, true);
-            writer.WriteLine("Source = " + heading + ", " + "Local odds = " + localOdds + ", " + "Reward = " + data_out + ", " + "Time = " + Time.realtimeSinceStartup + ", ");
+            writer.WriteLine("ID= " + ReadInput.participantID + ", " + "Source = " + heading + ", " + "Local odds = " + localOdds + ", " + "Reward = " + data_out + ", " + "Time = " + Time.realtimeSinceStartup + ", ");
             writer.Close();
         }
         public string GetLocation()
