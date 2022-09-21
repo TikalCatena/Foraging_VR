@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+//using Unity.Mathematics;
 //using Random = UnityEngine.Random;
 
 
@@ -151,13 +152,13 @@ namespace VHS
 
                 //Light proportional to timer progress
 
-                thislight.intensity = lightIntensity * ((timerMean - timer)/timerMean);
+                thislight.intensity = (lightIntensity * ((timerMean - timer)/timerMean) * ((timerMean - timer)/timerMean) * ((timerMean - timer)/timerMean));
             }
 
             if (timer <= 0)
             {
                 pointsAvailable = true;
-                thislight.intensity = 2;
+                thislight.intensity = lightIntensity;
             }
         }
 
