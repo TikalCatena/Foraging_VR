@@ -129,7 +129,7 @@ namespace VHS
         public static void updateData_2(string heading, float localOdds, float data_out, bool testfile)
         {
             string testpath = "Assets/Resources/test.txt";
-            string path = "Assets/Resources/";
+            string path = "Assets/Resources/data/";
             string path2 = string.Format("{0}id_{1}_{2:MM_dd}.txt", path, ReadInput.participantID, System.DateTime.Now);
 
             if (testfile)
