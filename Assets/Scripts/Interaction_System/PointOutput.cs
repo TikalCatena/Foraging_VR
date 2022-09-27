@@ -22,10 +22,13 @@ namespace VHS
         [SerializeField] private float point1Delta = 1;
         [SerializeField] private int sourceId;
         [SerializeField] private int lightIntensity = 2;
+
+
         //[SerializeField] LightingSwitch localLight; 
         private bool pointsAvailable;
         private float timer = 5;
-        public Light thislight;
+        public Light thislight; //get the point light to modify intensity
+		public GameObject thiscrystal; //get the crystal to modify material emissions
         public static float gotPoint;
         float timerMean => timerMods.getTimerMean();
         float timerSD => timerMods.getTimerSD();
@@ -47,14 +50,19 @@ namespace VHS
         [SerializeField] private string area;
         public string _area => area;
 
-          
+
         //private int timerMod;
         //int id = sourceId;
 
+        [SerializeField] private Material crystalMaterial;
+        [SerializeField] private Renderer objectToChange;
 
         public void Start()
         {
-			_baseTooltip = TooltipMessage;
+            //create an instance of the emissive material to modify if you want to change individual objects materials instead of for all obj with that material
+            //crystalMaterial = objectToChange.GetComponent<Renderer>().material;
+
+            _baseTooltip = TooltipMessage;
             // SELECT LIGHT TO BE MANIPULATED
             //GameObject localLight = GameObject.Find("Point_light_0");
             //Light thislight = localLight.GetComponent<Light>();
@@ -75,7 +83,7 @@ namespace VHS
             // timerMod = typeDistShuffle[sourceId];
         }
 
-       
+    
         public override void OnInteract()
             {
 
@@ -150,6 +158,10 @@ namespace VHS
                 timer -= Time.deltaTime;
                 pointsAvailable = false;
 
+                //attempting to make material emission increase with timer
+
+                crystalMaterial.SetFloat("_EmissionPower", (20f * ((timerMean - timer) / timerMean) * ((timerMean - timer) / timerMean) * ((timerMean - timer) / timerMean)) + .2f);
+               
                 //Light proportional to timer progress
 
                 thislight.intensity = (lightIntensity * ((timerMean - timer)/timerMean) * ((timerMean - timer)/timerMean) * ((timerMean - timer)/timerMean));

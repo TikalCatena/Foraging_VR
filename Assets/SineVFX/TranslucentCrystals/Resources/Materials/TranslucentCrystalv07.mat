@@ -102,7 +102,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionPower: 4.9
+    - _EmissionPower: 20.322065
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
