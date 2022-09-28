@@ -57,6 +57,10 @@ namespace VHS
         [SerializeField] private Material crystalMaterial;
         [SerializeField] private Renderer objectToChange;
 
+        //sound effects
+        public AudioSource harvestSound;
+        public AudioSource emptySound;
+
         public void Start()
         {
             //create an instance of the emissive material to modify if you want to change individual objects materials instead of for all obj with that material
@@ -103,11 +107,15 @@ namespace VHS
                     //HERE PULL MODIFIER FROM RANDOM DISTRIBUTION, REPLACE TIMERMOD WITH THIS [not sure this is still relevant]
                     uiPanel.Point1Update(point1Delta);
                     gotPoint = 1f;
+
+                    harvestSound.Play();
                 }
                 else
                 {
                     uiPanel.TempMessage("No points received", "warning");
                     gotPoint = 0f;
+
+                    emptySound.Play();
                 }    
 
                     // Original Timer
