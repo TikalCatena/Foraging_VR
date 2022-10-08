@@ -1,0 +1,2 @@
+ID= 8999, Source = 3, Local odds = 0.6, Reward = 1, Time = 33.18626, 
+ID= 8999, Source = 3, Local odds = 0.6, Reward = 0, Time = 38.5378, 
