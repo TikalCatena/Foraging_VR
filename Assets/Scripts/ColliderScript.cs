@@ -111,8 +111,8 @@ namespace VHS
         // https://support.unity.com/hc/en-us/articles/115000341143-How-do-I-read-and-write-data-from-a-text-file-
         public static void updateData(string heading, float data_out, bool testfile)
         {
-            string testpath = "Assets/Resources/test.txt";
-            string path = "Assets/Resources/";
+            string testpath = "Assets/Resources/data_redundancy/test.txt";
+            string path = "Assets/Resources/data_redundancy/";
             string path2 = string.Format("{0}{1}{2:hh_mm}.txt", path, ReadInput.participantID, System.DateTime.Now);
 
             if (testfile)

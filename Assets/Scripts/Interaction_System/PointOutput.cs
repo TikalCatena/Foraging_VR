@@ -113,7 +113,7 @@ namespace VHS
                 else
                 {
                     uiPanel.TempMessage("No points received", "warning");
-					uiPanel.Point1Update(point1Delta);
+					uiPanel.Point1Update(0);
                     gotPoint = 0f;
 
                     emptySound.Play();
