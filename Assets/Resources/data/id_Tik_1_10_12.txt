@@ -1,0 +1,8 @@
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 0, Time = 64.52036, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 0, Time = 70.15328, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 1, Time = 75.73521, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 1, Time = 81.16754, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 1, Time = 86.35269, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 0, Time = 92.03035, 
+ID= Tik_1, Source = 2, Local odds = 0.55, Reward = 0, Time = 101.7118, 
+ID= Tik_1, Source = 3, Local odds = 0.5, Reward = 0, Time = 152.2094, 
