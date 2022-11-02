@@ -1,0 +1,14 @@
+time_Other,242.7232
+time_Other,244.7444
+Gained points in Crystalsv01_0 (5),0
+time_Other,245.1549
+time_Other,245.1989
+Gained points in Crystalsv01_0 (6),1
+time_Other,245.299
+time_Other,245.3543
+Gained points in Crystalsv01_0 (6),1
+Gained points in Crystalsv01_0 (6),0
+Gained points in Crystalsv01_0 (6),1
+Gained points in Crystalsv01_0 (6),0
+Gained points in Crystalsv01_0 (6),0
+Gained points in Crystalsv01_0 (6),0
