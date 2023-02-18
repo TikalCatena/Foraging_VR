@@ -1,0 +1,3 @@
+ID= test, Source = 3, Local odds = 0.55, Reward = 1, Time = 74.77936, 
+ID= test, Source = 3, Local odds = 0.55, Reward = 0, Time = 80.22975, 
+ID= test, Source = 0, Local odds = 0.65, Reward = 1, Time = 85.95778, 
