@@ -1,0 +1,17 @@
+time_Other,288.701
+time_Other,288.7676
+time_Other,289.0908
+time_Other,291.2227
+time_Other,292.0002
+time_Other,295.3768
+time_Other,298.8305
+time_Other,301.8516
+time_Other,302.4056
+time_Other,303.4606
+time_Other,303.5821
+time_Other,305.054
+time_Other,308.1747
+time_Other,314.1052
+time_Other,314.1829
+time_Other,315.7152
+time_Other,316.8084
