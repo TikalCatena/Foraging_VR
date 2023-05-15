@@ -1,0 +1,8 @@
+ID= 325_1, Source = 2, Local odds = 0.5, Reward = 1, Time = 110.4139, 
+ID= 325_1, Source = 2, Local odds = 0.5, Reward = 0, Time = 116.4865, 
+ID= 325_1, Source = 3, Local odds = 0.65, Reward = 1, Time = 155.8794, 
+ID= 325_1, Source = 0, Local odds = 0.55, Reward = 1, Time = 180.6569, 
+ID= 325_1, Source = 0, Local odds = 0.55, Reward = 1, Time = 186.9319, 
+ID= 325_1, Source = 1, Local odds = 0.6, Reward = 1, Time = 212.4639, 
+ID= 325_1, Source = 1, Local odds = 0.6, Reward = 0, Time = 218.2051, 
+ID= 325_1, Source = 1, Local odds = 0.6, Reward = 1, Time = 225.057, 
